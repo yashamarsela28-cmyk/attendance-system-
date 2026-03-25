@@ -1,0 +1,12 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* Background image */
+    background-image: url('sukuna-x-gojo-3840x2160-21530.png');
+    background-size: cover;       /* Cover the entire page */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat; /* Don’t repeat */
+    color: white;                 /* Makes text visible on dark background */
+}

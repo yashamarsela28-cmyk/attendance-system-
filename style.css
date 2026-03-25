@@ -5,8 +5,125 @@ body {
 
     /* Background image */
     background-image: url('sukuna-x-gojo-3840x2160-21530.png');
-    background-size: cover;       /* Cover the entire page */
+    background-size: cover;       /* Cover the whole page */
     background-position: center;  /* Center the image */
-    background-repeat: no-repeat; /* Don’t repeat */
-    color: white;                 /* Makes text visible on dark background */
+    background-repeat: no-repeat; /* Do not repeat */
+    color: white;                 /* Text color on dark background */
+}
+
+/* Dark overlay so text is readable */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6); /* Semi-transparent black overlay */
+    z-index: -1;
+}
+
+/* Navbar / header */
+.navbar {
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Cards layout */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card.present {
+    border-top: 5px solid #4CAF50;
+}
+
+.card.absent {
+    border-top: 5px solid #F44336;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* Student section */
+.student-section {
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.student-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.student {
+    background: rgba(255,255,255,0.1);
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #45a049;
+}
+
+/* Chart Section */
+.chart-section {
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .student {
+        flex: 1 1 100%;
+    }
 }

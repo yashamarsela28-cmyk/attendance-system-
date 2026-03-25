@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Attendance Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>Smart Attendance Dashboard</h1>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Summary Cards -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="total">10</p>
+            </div>
+
+            <div class="card present">
+                <h3>Present</h3>
+                <p id="present">0</p>
+            </div>
+
+            <div class="card absent">
+                <h3>Absent</h3>
+                <p id="absent">0</p>
+            </div>
+        </div>
+
+        <!-- Student List -->
+        <div class="student-section">
+            <h2>Mark Attendance</h2>
+
+            <div id="student-list" class="student-list">
+                <!-- Students will come here from JS -->
+            </div>
+
+            <button class="submit-btn">
+                Submit Attendance
+            </button>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="chart-section">
+            <h2>Attendance Overview</h2>
+            <canvas id="chart"></canvas>
+        </div>
+
+    </div>
+
+</body>
+</html>
